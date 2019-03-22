@@ -2,9 +2,9 @@ module Robot where
 import Control.Monad
 import Data.Char
 
-data Position = Position Int Int Direction deriving (Show)
-data Spin = LeftTurn | RightTurn deriving (Show)
-data Direction = North | East | South | West deriving (Enum, Show)
+data Position = Position Int Int Direction deriving (Show, Eq)
+data Spin = LeftTurn | RightTurn deriving (Show, Eq)
+data Direction = North | East | South | West deriving (Enum, Show, Eq)
 
 changeDirection :: Direction -> Spin -> Direction
 changeDirection North LeftTurn = West
